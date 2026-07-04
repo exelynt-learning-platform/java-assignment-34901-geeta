@@ -3,11 +3,6 @@ import pypandoc
 
 content = r"""# Understanding Version Control, Git, and GitHub Fundamentals
 
-
-
-
-
-
 ## 1. What is Version Control and Why is it Important?
 
 Version control is a system that keeps track of changes made to files, especially source code, over time. It allows developers to record every modification, view previous versions, and restore older versions if needed.
