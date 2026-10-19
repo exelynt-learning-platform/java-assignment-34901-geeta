@@ -1,0 +1,71 @@
+import pypandoc
+
+content = """Assignment: Setting Up Git and Understanding the Git Environment
+
+1. Objective
+
+The objective of this assignment is to install Git, verify that it is working, configure a global username and email address, and demonstrate basic Git commands using Terminal or Git Bash.
+
+2. Operating System
+
+Operating system used: macOS
+
+Note: If you use Windows or Linux, follow the relevant installation instructions for your operating system and update this section.
+
+3. Installing Git
+
+On macOS, Git can be installed using one of these methods:
+
+Option A: Check whether Git is already installed
+Open Terminal and run:
+
+git --version
+
+If Git is installed, the command displays its version. If it is not installed, macOS may prompt you to install the Xcode Command Line Tools.
+
+Option B: Install using Homebrew
+If Homebrew is installed, run:
+
+brew install git
+
+After installation, verify it:
+
+git --version
+
+On Windows, download Git from https://git-scm.com/download/win and follow the installer instructions. Git Bash is included with Git for Windows.
+
+On Linux, use your distribution's package manager, such as:
+
+sudo apt update
+sudo apt install git
+
+4. Verifying Git Installation
+
+Open Terminal (macOS/Linux) or Git Bash (Windows), then run:
+
+git --version
+
+Example output:
+
+git version 2.x.x
+
+The exact version number may differ. A version response confirms that Git is available in the terminal environment.
+
+5. Configuring Global Username and Email
+
+Set the name you want Git to record on your commits:
+
+git config --global user.name "Your Name"
+
+Set the email address you want Git to record on your commits:
+
+git config --global user.email "you@example.com"
+
+Replace the example name and email with your own details. Use an email address appropriate for your Git commits.
+
+Verify the configuration:
+
+git config --global user.name
+git config --global user.email
+
+You can also display all global Git settings
