@@ -1,0 +1,68 @@
+import pypandoc
+
+content = """Assignment: Understanding Version Control, Git, and GitHub Fundamentals
+
+1. What Is Version Control and Why Is It Important?
+
+Version control is a way to record and manage changes made to files over time. In software development, it helps developers keep track of changes in source code, understand what was changed, and return to an earlier version if something goes wrong.
+
+Version control is important because several developers may work on the same project, and files can change frequently. It keeps a history of the work, helps prevent lost changes, and makes it easier to compare versions and work together.
+
+2. Why Do Developers Use Git?
+
+Git is a distributed version control system used to track changes in a project. Developers use Git to save snapshots of their work, create branches for new features or bug fixes, and merge completed work into the main codebase.
+
+Git also helps developers review changes, collaborate with teammates, and restore earlier versions when needed. Since Git can work locally, developers can commit changes and review project history without needing a constant internet connection.
+
+3. Common Problems Git Solves
+
+Git helps solve several common software development problems:
+
+- Losing code changes: Git keeps a history of committed changes, so earlier versions can be recovered.
+- Working on features safely: Branches let developers work on separate features or fixes without directly changing the main branch.
+- Team conflicts: Git helps combine work from different developers and identifies conflicts that need to be resolved.
+- Tracking changes: Developers can see which files changed and review the differences between versions.
+- Finding the source of a change: Commit history shows who recorded a change and includes a message describing it.
+- Experimenting safely: Developers can try an approach on a separate branch and decide later whether to merge it.
+
+Git does not automatically prevent every mistake or resolve every conflict, but it provides tools to manage changes and recover from many problems.
+
+4. Difference Between Git and GitHub
+
+Git and GitHub are related, but they are not the same.
+
+Git is a version control tool installed on a computer. It tracks changes to files, creates commits, manages branches, and merges work. Git can be used without GitHub.
+
+GitHub is an online platform for hosting Git repositories. It makes it easier for developers to share code and collaborate. GitHub also provides features such as pull requests, code reviews, issue tracking, and project management.
+
+For example, a developer can use Git to create commits and branches on their computer, then push the repository to GitHub so teammates can access and review the work.
+
+5. Centralized vs. Distributed Version Control Systems
+
+Centralized Version Control System (CVCS)
+
+In a centralized system, the project history is mainly stored on a central server. Developers connect to that server to access the repository and share changes. This approach gives the team one central location for the project, but server or network problems can limit access to version-control operations.
+
+Example: Subversion (SVN).
+
+Distributed Version Control System (DVCS)
+
+In a distributed system, each developer normally has a local copy of the repository, including its history. Developers can commit changes and review history locally, then share changes with other repositories when needed. This provides more flexibility for offline work and can reduce dependence on a single server for everyday operations.
+
+Examples: Git and Mercurial.
+
+Main Differences
+
+- Repository history: In a centralized system, the main history is kept on the central server; in a distributed system, each clone normally has repository history locally.
+- Offline work: Centralized systems often require server access for many operations; distributed systems such as Git support most routine version-control operations offline.
+- Collaboration: Both approaches support teamwork, but distributed systems allow developers to exchange changes between repositories.
+- Failure recovery: A centralized server failure can interrupt access to the main repository. With a distributed system, local clones can provide additional copies of the repository history, although backups are still important.
+
+6. Conclusion
+
+Version control helps developers organize code changes, preserve project history, and work together more safely. Git provides the tools to track and manage these changes, while GitHub offers an online place to host Git repositories and collaborate with others. Understanding centralized and distributed version control helps developers choose and use the right workflow for their projects.
+"""
+
+output_path = "/mnt/data/Understanding_Version_Control_Git_GitHub.txt"
+pypandoc.convert_text(content, "plain", format="md", outputfile=output_path, extra_args=["--standalone"])
+print(f"Created: {output_path}")
